@@ -52,7 +52,7 @@ install_github_cli() {
       ;;
     *)
       local platform=notset
-      local ext="tar.gz"
+      local ext=notset
       ;;
   esac
 
