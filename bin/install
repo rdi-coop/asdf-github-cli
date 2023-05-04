@@ -40,17 +40,19 @@ install_github_cli() {
   local bin_install_path="$install_path/bin"
   local bin_path="${bin_install_path}/gh"
   local arch="$(get_arch)"
-  local ext="$(get_ext)"
 
   case $(uname | tr '[:upper:]' '[:lower:]') in
     linux*)
       local platform="linux_${arch}"
+      local ext="tar.gz"
       ;;
     darwin*)
       local platform="macOS_${arch}"
+      local ext="$(get_ext)"
       ;;
     *)
       local platform=notset
+      local ext="tar.gz"
       ;;
   esac
 
